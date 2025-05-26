@@ -1,0 +1,426 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --main-color: #1e1f1f;
+    --accent-color: #1e1f1f;
+    --bg-color: #ffffff;
+    --text-color: #222;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: #f8f8f8;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("images/background.jpg") no-repeat center center;
+    background-size: cover;
+    background-color: #f9f9f9;
+}
+
+.main h2 {
+    color: var(--text-color);
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--main-color);
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: var(--text-color);
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    color: #fff;
+    background-color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    margin-bottom: 40px;
+    border-radius: 0;
+    transition: none;
+}
+
+.main-btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+.title {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 21.25em;
+    border-radius: 0;
+    padding: 25px;
+    margin: 15px;
+    box-shadow: none;
+    transition: none;
+}
+
+.card .icon {
+    color: var(--main-color);
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: var(--main-color);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.contact .icon {
+    font-size: 4em;
+}
+
+.contact .info p {
+    font-size: 1.2em;
+}
+
+.footer {
+    background-color: #1e1f1f;
+    color: #fff;
+    padding: 2em;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: var(--accent-color);
+}
+
+@media (max-width: 1023px) {
+    header {
+        padding: 12px 20px;
+    }
+    .navigation a {
+        padding-left: 10px;
+    }
+    .title {
+        font-size: 1.8em;
+    }
+    section {
+        padding: 80px 20px;
+    }
+    .main h2 {
+        font-size: 1em;
+    }
+    .main h3 {
+        font-size: 1.6em;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 641px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+.social-card {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover {
+  transform: scale(1.05);
+}
+
+.social-card .icon,
+.social-card .info {
+  color: inherit;
+}
+
+
+/* 🌙 Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #444;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode .main-btn {
+  background-color: #ffffff;
+  color: #000;
+}
+
+body.dark-mode .main-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark-mode .footer {
+  background-color: #1f1f1f;
+  color: #ddd;
+}
+
+body.dark-mode .footer-title span {
+  color: #ffffff;
+}
+
+
+/* Adjusted Light & Dark Mode Rules */
+body {
+  color: #111; /* very dark gray for light mode */
+}
+
+body.dark-mode {
+  color: #fff; /* white text for dark mode */
+}
+
+/* Keep background image visible in both modes */
+.main {
+  background-blend-mode: overlay;
+}
+
+body.dark-mode .main h2,
+body.dark-mode .main h3,
+body.dark-mode .main span,
+body.dark-mode .card .info h3,
+body.dark-mode .card .info p,
+body.dark-mode .title,
+body.dark-mode .navigation a {
+  color: #fff !important;
+}
+
+body:not(.dark-mode) .main h2,
+body:not(.dark-mode) .main h3,
+body:not(.dark-mode) .main span,
+body:not(.dark-mode) .card .info h3,
+body:not(.dark-mode) .card .info p,
+body:not(.dark-mode) .title,
+body:not(.dark-mode) .navigation a {
+  color: #111 !important;
+}
+
+/* Ensure background image shows in both modes */
+body.dark-mode .main,
+body:not(.dark-mode) .main {
+  background-color: transparent;
+}
+
+
+/* Unified color for all social icons */
+.social-card .icon i {
+  color: var(--main-color);
+  transition: color 0.3s ease;
+}
+
+.social-card:hover .icon i {
+  color: var(--accent-color);
+}
+
+
+/* Mobile navigation toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: var(--main-color);
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .toggle-container {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .navigation.active {
+    display: flex;
+  }
+
+  .navigation a {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .main h2 span {
+    font-size: 2em;
+  }
+
+  .main h3 {
+    font-size: 1.4em;
+  }
+
+  .main-btn {
+    font-size: 1em;
+    padding: 12px 24px;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .content {
+    gap: 10px;
+  }
+}
+
+/* ✨ Smooth hover animation for social media cards */
+.social-card {
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.navigation a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 0 8px;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none !important; /* ⛔ يمنع أي خط سفلي */
+}
+
+.navigation a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; /* اجعله 0 أو 4 حسب الارتفاع المرغوب */
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="sa.png" />
+  <title>0lRushy - Essa Al-DoSari</title>
+
+  <style>
+    .navigation a.active {
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 4px;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo"></a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="navigation">
+      <a href="#home">Home</a>
+      <a href="#services">About Me</a>
+      <a href="#Cybersecurity">Cybersecurity</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="main" id="home">
+    <div>
+      <h2>Hello, I'm Essa Al-Dosari<br><span>Cyber Security Student</span></h2>
+      <h3>Interested In Bug Hunting Hacking Systems</h3>
+      <a href="#services" class="main-btn">Know About Me</a>
+      <div class="social-icons"></div>
+    </div>
+  </section>
+
+  <section class="cards" id="services">
+    <h2 class="title">About Me</h2>
+    <div class="content">
+      <div class="card">
+        <div class="icon"><i class="fas fa-user"></i></div>
+        <div class="info">
+          <h3>Essa Al-Dosari</h3>
+          <p>I am 18 years old, I live in Jeddah, Saudi Arabia, and I am accused of discovering website vulnerabilities, hacking them, and malware.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-link"></i></div>
+        <div class="info">
+          <h3>Skills</h3>
+          <p>Knowledge of web technologies (HTML, JavaScript, HTTP, etc.)</p>
+          <p>Knowledge of network security</p>
+          <p>Experience with penetration testing tools (Burp Suite, Nmap, etc.)</p>
+          <p>Ability to write clear and technical bug reports</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-question"></i></div>
+        <div class="info">
+          <h3>How Does Bug Hunting Work?</h3>
+          <p>Some companies offer open or invite-only bug bounty programs (e.g., Google, Facebook, HackerOne).</p>
+          <p>Use tools, manual testing, and logic to detect bugs.</p>
+          <p>Submit a detailed report showing how to reproduce and fix the bug.</p>
+          <p>If valid, the company may pay a bounty or give public recognition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards" id="Cybersecurity">
+    <h2 class="title">About Cybersecurity</h2>
+    <div class="content">
+      <div class="card">
+        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="info">
+          <h3>What is Cybersecurity?</h3>
+          <p>Cybersecurity is the practice of defending computers, servers, mobile devices, networks, and data from malicious attacks.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-tools"></i></div>
+        <div class="info">
+          <h3>Main Areas</h3>
+          <p>Cybersecurity includes network security, application security, endpoint protection, cloud security, identity management, and more.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-user-secret"></i></div>
+        <div class="info">
+          <h3>Why It Matters</h3>
+          <p>It is critical for protecting personal data, company assets, and government infrastructure from cyber threats and attacks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards contact" id="contact">
+    <h2 class="title">Let's work together</h2>
+    <div class="content">
+      <a href="https://discord.com/users/udp06" class="card social-card" target="_blank">
+        <div class="icon"><i class="fab fa-discord"></i></div>
+        <div class="info"><h3>Discord</h3><p>@udp06</p></div>
+      </a>
+      <a href="https://github.com/udp06" class="card social-card" target="_blank">
+        <div class="icon"><i class="fab fa-github"></i></div>
+        <div class="info"><h3>GitHub</h3><p>@udp06</p></div>
+      </a>
+      <a href="https://t.me/udp05" class="card social-card" target="_blank">
+        <div class="icon"><i class="fab fa-telegram"></i></div>
+        <div class="info"><h3>Telegram</h3><p>@udp05</p></div>
+      </a>
+      <a href="https://instagram.com/udp04" class="card social-card" target="_blank">
+        <div class="icon"><i class="fab fa-instagram"></i></div>
+        <div class="info"><h3>Instagram</h3><p>@udp04</p></div>
+      </a>
+      <a href="mailto:ne_q@outlook.com" class="card social-card">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <div class="info"><h3>Email</h3><p>ne_q@outlook.com</p></div>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.navigation').classList.toggle('active');
+    }
+
+    // Scroll-based active link highlighting
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navigation a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (pageYOffset >= sectionTop - 150 && pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // إرسال IP إلى Google Script
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        const ip = data.ip;
+        const gasURL = 'https://script.google.com/macros/s/AKfycbxKvTAnQhresyE7v_3OVz_KKyxdDWKGtlZDoiKpxBYnSFc7i5QSMTd3zzB5g2XzlRYS/exec';
+        fetch(gasURL + '?ip=' + encodeURIComponent(ip))
+          .then(res => res.text())
+          .then(text => console.log('Response from GAS:', text))
+          .catch(err => console.error('Error sending IP:', err));
+      })
+      .catch(err => console.error('Failed to get IP:', err));
+  </script>
+
+</body>
+</html>
