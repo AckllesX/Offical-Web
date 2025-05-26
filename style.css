@@ -75,7 +75,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.85)),
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.25)),
                 url("images/background.jpg") no-repeat center center;
     background-size: cover;
 }
